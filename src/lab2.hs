@@ -7,7 +7,7 @@ data (Tree a) = Empty | Node (Tree a) a (Tree a) deriving (Show)
 
 instance Eq a => Eq (Tree a) where 
    Empty == Empty = True
-   (Node left v right) == (Node left' v' right') = (left == left') && v == v' && (right == right')
+   tree1 == tree2 = (toList tree1) == (toList tree2)
    _ == _ = False
 
 instance Ord a => Semigroup (Tree a) where
@@ -61,7 +61,3 @@ getGreatest (Node left x right)  = let (right', val) = getGreatest right in (Nod
 toList :: Tree a -> [a]
 toList Empty = []
 toList (Node left v right) = toList left ++ [v] ++ toList right
-
-kek :: Eq a => Tree a -> Tree a -> Bool
-kek Empty Empty = True
-kek (Node left v right) (Node left' v' right') = (left == left') && v == v' && (right == right')

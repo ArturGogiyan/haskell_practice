@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 9852e9382b4e1124ea625f7019b529385b59c127a90c3dbe1b76f0882115fa71
+-- hash: e7a546e5ca7173431f22d9a20844e6d83ddefbc70c269fee47e1b4c51f2ec23a
 
 name:           lab2
 version:        0.1.0.0
@@ -27,6 +27,8 @@ source-repository head
 
 library
   exposed-modules:
+      Lab1
+      Lab2
       Lib
   other-modules:
       Paths_lab2

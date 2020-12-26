@@ -7,8 +7,7 @@ data (Tree a) = Empty | Node (Tree a) a (Tree a) deriving (Show)
 
 instance Eq a => Eq (Tree a) where 
    Empty == Empty = True
-   tree1 == tree2 = (toList tree1) == (toList tree2)
-   _ == _ = False
+   tree1 == tree2 = toList tree1 == toList tree2
 
 instance Ord a => Semigroup (Tree a) where
     (<>) a b = foldr (flip insertToTree) a b

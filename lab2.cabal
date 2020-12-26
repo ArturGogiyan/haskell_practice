@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: e7a546e5ca7173431f22d9a20844e6d83ddefbc70c269fee47e1b4c51f2ec23a
+-- hash: 572e7466cdd26deff1801b2725ee34c825ca8cfa7a773330e6043fdb5bdb8e7c
 
 name:           lab2
 version:        0.1.0.0
@@ -37,6 +37,7 @@ library
   build-depends:
       HUnit
     , base >=4.7 && <5
+    , leancheck
   default-language: Haskell2010
 
 executable lab2-exe
@@ -50,6 +51,7 @@ executable lab2-exe
       HUnit
     , base >=4.7 && <5
     , lab2
+    , leancheck
   default-language: Haskell2010
 
 test-suite lab2-test
@@ -64,4 +66,5 @@ test-suite lab2-test
       HUnit
     , base >=4.7 && <5
     , lab2
+    , leancheck
   default-language: Haskell2010
